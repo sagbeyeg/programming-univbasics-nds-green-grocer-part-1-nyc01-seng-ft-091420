@@ -21,7 +21,13 @@ def consolidate_cart(cart)
     counter = 0 
     item_counter = 0 
     
-    while counter < cart_output.length
+    while counter < cart_output.length do 
+      if hash == cart_output[counter]
+        hash[:count] = item_counter + 1 
+        item_counter = item_counter + 1
+      end
+      counter += 1
+    end
   end
 end
 
